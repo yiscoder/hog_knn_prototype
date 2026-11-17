@@ -1,0 +1,33 @@
+train/bottle: 61 images
+train/book: 62 images
+train/cup: 49 images
+
+Cross-validation accuracy on training data (optimistic, see note at top):
+  K=1: 1.000
+  K=3: 1.000
+  K=5: 0.994
+  K=7: 0.994
+
+Chosen K: 1
+
+TEST accuracy (unseen objects): 0.862  (29 images)
+
+              precision    recall  f1-score   support
+
+      bottle       1.00      0.73      0.85        15
+        book       0.00      0.00      0.00         0
+         cup       0.78      1.00      0.88        14
+
+    accuracy                           0.86        29
+   macro avg       0.59      0.58      0.57        29
+weighted avg       0.89      0.86      0.86        29
+
+Confusion matrix (rows = true, columns = predicted):
+[[11  0  4]
+ [ 0  0  0]
+ [ 0  0 14]]
+
+Unknown threshold (mean neighbor distance): 12.938
+You can adjust it live in run.py with the + and - keys.
+
+Model saved to C:\Users\hp\PycharmProjects\hog_knn_prototype\models\knn_model.pkl
